@@ -29,8 +29,9 @@
     scene.add(light);
     scene.add(new THREE.AmbientLight(0x666666));
     
+    var loader = new THREE.TextureLoader();
     var geometry = new THREE.BoxGeometry(1, 1, 1);
-    var material = new THREE.MeshBasicMAterial({color: 0xccffcc});
+    var material = new THREE.MeshBasicMAterial({color: 0xccffcc, map: loader.load('toy_hand_spinner_boy2.png')});
     var mesh = new THREE.Mesh(geometry, material);
     scene.add( mesh );
     
